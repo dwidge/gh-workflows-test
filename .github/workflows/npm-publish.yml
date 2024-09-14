@@ -1,6 +1,7 @@
 name: NPM Publish
 
 on:
+  workflow-dispatch:
   push:
     branches:
       - main
@@ -18,6 +19,7 @@ jobs:
           cache: "pnpm"
           node-version-file: "package.json"
       - run: pnpm install
+      - run: pnpm test
       - uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

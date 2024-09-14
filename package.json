@@ -16,7 +16,8 @@
     "src"
   ],
   "scripts": {
-    "prepare": "rimraf dist && ncp assets/ dist/ && tsc && tsc --project tsconfig.esm.json"
+    "prepare": "rimraf dist && ncp assets/ dist/ && tsc && tsc --project tsconfig.esm.json",
+    "test": "node --test"
   },
   "peerDependencies": {},
   "devDependencies": {
